@@ -15,7 +15,7 @@ Git
 
 ### Installation instruction
 ```
-Git clone 
+Git clone git@github.com:JBcollo1/WK1-code-challenge.git
 
 ```
 

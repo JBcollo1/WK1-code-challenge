@@ -5,23 +5,28 @@ let speedPoint = function (speed){
  // If the number of points is negative, return 0 points   
     if (points < 0) {
        return (points * -0)
-    
+// Return the number of points
     } else{
         return `${points}`
     }
 
 }
-
+// Function to determine the driver's status based on the number of points on their record
 function speedDetector(points){
+// If the number of points is 0, return "OK
     if(points === 0){
         return "OK"
-    }else if(points > 12){
+    }
+// If the number of points is greater than 12, return "License suspended"
+    else if(points > 12){
         return "License suspended"
-    }else{
+    }
+// If the number of points is between 1 and 12, return a string indicating the number of points
+     else{
         return `points:${points}`
     }
-
-    
-
 }
-console.log(speedDetector(speedPoint(100)))
+
+// The first test case checks the output of the `speedDetector` function when the number of points is 3
+console.log(speedDetector(speedPoint(85))); // Output: "points: 3"
+
