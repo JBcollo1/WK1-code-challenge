@@ -5,7 +5,7 @@
 #### By *Jorbat Collins Kamau*
 
 ## Description
-They are javascript codes that solve: Student grade generator problem, Speed detector problem and Net salary calculator problem.
+Contains javascript codes that solve: Student grade generator problem, Speed detector problem and Net salary calculator problem.
 
 ## Installation
 You use git clone to be able to download the documents in the GitHub

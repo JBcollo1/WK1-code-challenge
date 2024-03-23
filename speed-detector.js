@@ -28,5 +28,5 @@ function speedDetector(points){
 }
 
 // The first test case checks the output of the `speedDetector` function when the number of points is 3
-console.log(speedDetector(speedPoint(85))); // Output: "points: 3"
+console.log(speedDetector(speedPoint(69))); // Output: "points: 3"
 
