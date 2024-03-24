@@ -15,7 +15,12 @@ function netSalaryCalculator(basicSalary, benefit,tier = 1){
   }
 // Function to calculate the tax owed based on the gross salary
   function calculateTax(grossSalary){
-    
+  // The tax is calculated based on the following conditions:
+  // - If the gross salary is less than or equal to 24000, the tax is 10% of the gross salary
+  // - If the gross salary is between 24001 and 32333, the tax is 24000 * 0.1 + (gross salary - 24000) * 0.25
+  // - If the gross salary is between 32334 and 500000, the tax is 24000 * 0.1 + (32333 - 24000) * 0.25 + (gross salary - 32333) * 0.3
+  // - If the gross salary is between 500001 and 800000, the tax is 24000 * 0.1 + (32333 - 24000) * 0.25 + (500000 - 32333) * 0.3 + (gross salary - 500000) * 0.325
+  // - If the gross salary is greater than 800000, the tax is 24000 * 0.1 + (32333 - 24000) * 0.25 + (500000 - 32333) * 0.3 + (800000 - 500000) * 0.325 + (gross salary - 800000) * 0.35  
     if(grossSalary <= 24000){
       return grossSalary * 0.1
     }else if(grossSalary > 24000 && grossSalary <= 32333){
@@ -33,6 +38,7 @@ function netSalaryCalculator(basicSalary, benefit,tier = 1){
   }
 // Function to calculate the NHIF deduction based on the gross salary
   function nhifDeductor(grossSalary){
+  //  The NHIF deduction is provided based on the gross salary range
     if (grossSalary <= 5999){
       return 150
     }else if(grossSalary > 5999 && grossSalary <= 7999){
